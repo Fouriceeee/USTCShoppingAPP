@@ -1,5 +1,4 @@
 <template>
-  <header class="header-wrapper">
     <!-- 顶部蓝色导航栏 -->
     <nav class="navbar">
       <ul class="nav-list">
@@ -65,10 +64,9 @@
     </div>
 
 
-    <main class="content">
-      <p style="height: 2000px;">滚动内容测试...</p>
-    </main>
-  </header>
+<!--    <main class="content">-->
+<!--      <p style="height: 2000px;">滚动内容测试...</p>-->
+<!--    </main>-->
 </template>
 
 <script setup lang="js">
