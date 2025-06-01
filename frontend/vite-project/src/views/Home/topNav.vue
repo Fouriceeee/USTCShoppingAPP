@@ -114,7 +114,7 @@ function toggleMenu() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky; /*  固定在顶部 */
+  position: sticky; /* 固定在顶部 */
   height: 80px;
   background: #064273;
   padding: 0 20px;
@@ -122,8 +122,8 @@ function toggleMenu() {
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  z-index: 1000;
+
+  z-index: 1000;/* 叠放在最上面 */
 }
 
 

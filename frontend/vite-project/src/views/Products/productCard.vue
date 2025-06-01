@@ -10,7 +10,10 @@
         <span>¥</span>
         <span class="price-value">199.99</span>
       </div>
-      <el-button type="primary" class="add-to-cart-button">加入购物车</el-button>
+      <el-button type="primary" class="add-to-cart-button">
+        <img class="cart-for-productCard-icon" src="@/assets/icons/cart-for-product-card.png" alt="">
+        加入购物车
+      </el-button>
     </div>
   </el-card>
 </template>
@@ -25,16 +28,17 @@
 .product-card {
   /* Set the background color of the card based on the image */
   background-color: #ffffff;
-  border: none; /* Remove default Element Plus border */
-  border-radius: 25px; /* Adjust border-radius as needed */
-  width: 280px; /* Adjust card width as needed */
-  /* Add padding if necessary for content */
+  border: none;
+  border-radius: 30px;
+  width: 300px;
+  height: 350px;
   padding: 15px;
-  box-sizing: border-box; /* Include padding in the width/height */
+  box-sizing: border-box;
+  margin: 0px;
 
   /* Apply the custom box-shadows */
   box-shadow:
-      10px 10px 40px 0px rgba(0, 0, 0, 0.7),   /* Dark shadow */
+      10px 10px 30px 0px rgba(0, 0, 0, 0.7),   /* Dark shadow */
       -5px -5px 30px 0px rgba(255, 255, 255, 0.1); /* Light shadow */
 
   /* Optional: Add transition for hover effects */
@@ -45,8 +49,8 @@
   /* Optional: Slight lift or change on hover */
   transform: translateY(-5px);
   box-shadow:
-      30px 30px 90px 0px rgba(0, 0, 0, 1),
-      -30px -30px 90px 0px rgba(255, 255, 255, 0.18);
+      30px 30px 80px 0px rgba(0, 0, 0, 1),
+      -30px -30px 80px 0px rgba(255, 255, 255, 0.18);
 }
 
 .product-image img {
@@ -94,5 +98,13 @@
   background-color: #0c4781;
   border: none;
   width: 80%;
+  padding-left: 0px;
+  padding-right: 5px;
+}
+
+.cart-for-productCard-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
 }
 </style>
