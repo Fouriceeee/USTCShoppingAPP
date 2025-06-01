@@ -34,8 +34,8 @@ const categories = ref([
 
 <style scoped>
 .category-sidebar {
-  width: 300px; /* 分类栏的固定宽度 */
-  background-color: rgba(201, 210, 228, 0.3);
+  width: 250px; /* 分类栏的固定宽度 */
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
   overflow: hidden;
@@ -71,8 +71,9 @@ const categories = ref([
 }
 
 .category-link:hover {
-  background-color: rgb(255, 255, 255); /* 悬停背景色 */
+  background-color: rgba(179, 205, 221, 0.3); /* 悬停背景色 */
   color: #05bcff; /* 悬停文字颜色 */
+  text-decoration: underline;
 }
 
 .arrow-icon {
