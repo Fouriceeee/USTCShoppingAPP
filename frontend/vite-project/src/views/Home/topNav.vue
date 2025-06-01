@@ -19,24 +19,32 @@
 
         <!-- 菜单按钮 -->
         <div class="menu">
-          <el-button type="text" class="menu-btn" @click="toggleMenu">
-            <svg class="menu-icon"
-                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                width="20"
-                height="20"
-                viewBox="0 0 50 50"
-            >
-              <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
-            </svg>
-            菜单
-          </el-button>
-          <ul v-if="showMenu" class="dropdown">
-            <li><a href="#">分类1</a></li>
-            <li><a href="#">分类2</a></li>
-            <li><a href="#">分类3</a></li>
-          </ul>
+          <el-dropdown @command="handleCommand" trigger="click">
+            <el-button type="text" class="menu-btn" @click="toggleMenu">
+              <svg class="menu-icon"
+                  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 50 50"
+              >
+                <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z
+                 M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z
+                 M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+              </svg>
+              菜单
+              <i class="el-icon-arrow-down el-icon--right"></i>
+            </el-button>
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item>Action 1</el-dropdown-item>
+                <el-dropdown-item>Action 2</el-dropdown-item>
+                <el-dropdown-item>Action 3</el-dropdown-item>
+                <el-dropdown-item disabled>Action 4</el-dropdown-item>
+                <el-dropdown-item divided>Action 5</el-dropdown-item>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
         </div>
-
       </div>
 
       <!-- 中间搜索框 -->
