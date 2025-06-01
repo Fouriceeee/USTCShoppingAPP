@@ -41,7 +41,8 @@
 
       <!-- 中间搜索框 -->
       <div class="search-box">
-        <input type="text" placeholder="搜索商品..." />
+        <input type="text" placeholder="搜索商品..." class="search-input" />
+        <el-button class="search-button" type="primary" @click="handleSearch">搜索</el-button>
       </div>
 
       <!-- 购物车 -->
@@ -174,22 +175,45 @@ function toggleMenu() {
 
 /* 搜索框 */
 .search-box {
-  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  max-width: 500px;
+  width: 100%;
   margin: 0 80px;
 }
 
-.search-box input {
-  width: 100%;
-  max-width: 500px;
+/* 输入框样式 */
+.search-input {
+  flex: 1;
   padding: 10px 14px;
+  font-size: 14px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-right: none;              /* 去掉右边框，与按钮无缝连接 */
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  box-sizing: border-box;
 }
+
+/* 按钮样式 */
+.search-button {
+  height: 38px;
+  padding: 0 10px;
+  font-size: 14px;
+  background-color: #cddded;
+  border: 1px solid #ccc;
+  color: #000205;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 
 /* 购物车按钮 */
 .cart a {
   text-decoration: none;
-  margin-right: 80px; /* 控制向左挪动的距离 */
+  margin-right: 80px;
 }
 
 .cart-btn {
