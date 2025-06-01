@@ -35,7 +35,7 @@
               <i class="el-icon-arrow-down el-icon--right"></i>
             </el-button>
             <template #dropdown>
-              <el-dropdown-menu>
+              <el-dropdown-menu class="dropdown">
                 <el-dropdown-item>Action 1</el-dropdown-item>
                 <el-dropdown-item>Action 2</el-dropdown-item>
                 <el-dropdown-item>Action 3</el-dropdown-item>
@@ -156,25 +156,13 @@ function toggleMenu() {
 }
 
 .dropdown {
-  position: absolute;
-  top: 30px;
-  width: 80px;
-  left: 0;
-  background: white;
-  border: 1px solid #ccc;
-  padding: 5px;
-  list-style: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  z-index: 1001;
-}
-
-.dropdown li {
-  margin: 5px 0;
+  cursor: pointer;
+  color: white;
 }
 
 .dropdown li a {
   text-decoration: none;
-  color: #333;
+  color: #202020;
 }
 
 .dropdown li a:hover {
