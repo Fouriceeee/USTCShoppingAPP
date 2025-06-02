@@ -20,9 +20,7 @@
 </template>
 
 <script setup>
-// If you're using Composition API with <script setup>
-// No specific script logic is needed for this basic card,
-// but you might add props for product data in a real application.
+
 </script>
 
 <style scoped>
