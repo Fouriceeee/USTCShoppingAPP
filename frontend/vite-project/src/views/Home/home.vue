@@ -22,7 +22,7 @@
         </div>
 
         <div class="home-top-4-wrapper"> <!--主页面顶部4区域-->
-
+          <login-bar class="home-login-bar" /> <!--放登录模块-->
         </div>
       </div>
 
@@ -56,10 +56,12 @@ import ProductCard from "@/views/Products/productCard.vue";
 import CategorySidebar from "@/views/Home/CategorySidebar.vue";
 import ImageCarousel from "@/views/Home/ImageCarousel.vue";
 import RecommendedProducts from "@/views/Home/RecommendedProducts.vue";
+import LoginBar from "@/views/Home/loginBar.vue";
 
 export default {
   name: 'Home',
   components: {
+    LoginBar,
     RecommendedProducts,
     ImageCarousel,
     CategorySidebar,
@@ -80,7 +82,7 @@ export default {
   padding: 20px 50px;
   margin: 0 auto;
   max-width: 1500px; /* 设置最大宽度 */
-  min-width: 960px;
+  min-width: 1140px;
   box-sizing: border-box;
 }
 
@@ -93,6 +95,7 @@ export default {
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  gap: 0px
 }
 
 /*主页顶部1区域*/
@@ -102,12 +105,14 @@ export default {
 
 /*主页顶部2区域*/
 .home-top-2-wrapper {
+  width: 100%;
   margin-right: 10px;
   margin-left: 10px;
 }
 
 /*主页顶部3区域*/
 .home-top-3-wrapper {
+  width: 100%;
   margin-right: 10px;
   margin-left: 10px;
 }

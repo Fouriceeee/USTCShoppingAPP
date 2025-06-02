@@ -8,7 +8,8 @@
 <!--      <p class="product-description">这里是商品的简要描述，可以放置商品的特色、卖点等信息。</p>-->
       <div class="product-price">
         <span>¥</span>
-        <span class="price-value">23999.99</span>
+        <span class="price-integer">23999</span>
+        <span class="price-decimal">.00</span>
       </div>
       <el-button type="primary" class="add-to-cart-button">
         <img class="cart-for-productCard-icon" src="@/assets/icons/cart-for-product-card.png" alt="">
@@ -36,7 +37,7 @@
   width: 100%;
   max-width: 300px;
   min-width: 200px;
-  aspect-ratio: 6 / 8; /*控制横纵比为6:7*/
+  aspect-ratio: 6 / 7.5; /*控制横纵比为6:7*/
   box-sizing: border-box;
 
   /* Apply the custom box-shadows */
@@ -72,7 +73,7 @@
 .product-title {
   font-size: 1.2em;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   color: #000205; /* Slightly brighter for title */
 }
 
@@ -89,14 +90,34 @@
 }*/
 
 .product-price {
-  font-size: 1.4em;
+  font-size: 2.0em;
   font-weight: bold;
   margin-bottom: 15px;
   color: #000205; /* Element Plus primary color for price */
+
+  display: flex; /* 使用 Flexbox 进行内部布局 */
+  align-items: baseline; /* 关键：使不同字号的文本基于基线对齐 */
+  line-height: 1; /* 减少价格行高，使垂直对齐更紧凑 */
 }
 
-.product-price .price-value {
-  margin-left: 5px;
+/* 货币符号样式 */
+.product-price span:first-child { /* 针对 '¥' 符号 */
+  font-size: 0.7em; /* 比整数部分小一些 */
+  margin-right: 2px; /* 与整数部分之间的间距 */
+}
+
+/* 整数部分样式 */
+.product-price .price-integer {
+  font-size: 1em; /* 继承 .product-price 的 2.0em，所以是最大的 */
+  /* 可以选择不设置 color，继承父级 */
+  color: #0d60cf; /* 整数部分使用较深的颜色，如果与父级颜色不同的话 */
+}
+
+/* 小数部分样式 */
+.product-price .price-decimal {
+  font-size: 0.6em; /* 关键：相对于父级 .product-price 的字号缩小，例如 0.6 * 2.0em = 1.2em */
+  margin-left: 0px; /* 与整数部分紧密连接 */
+  color: #000205; /* 小数部分可以颜色稍浅 */
 }
 
 .add-to-cart-button {

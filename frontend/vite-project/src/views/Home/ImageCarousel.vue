@@ -104,10 +104,11 @@ onUnmounted(() => {
 <style scoped>
 .image-carousel-container {
   width: 100%; /* 轮播图容器宽度自适应父容器 */
-  max-width: 600px; /* 例如，轮播图最大宽度 800px */
-  margin: 20px auto; /* 居中显示，上下间距 20px */
+  min-width: 200px;
+  max-width: 512px;
+  margin: 0px auto;
   position: relative;
-  overflow: hidden; /* 确保图片滑出时被裁剪 */
+  overflow: hidden;
   border-radius: 8px; /* 圆角 */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -116,7 +117,7 @@ onUnmounted(() => {
   display: flex;
   width: 100%;
   position: relative;
-  height: 300px; /* 固定轮播图高度 */
+  height: 200px; /* 固定轮播图高度 */
   overflow: hidden; /* 确保滑动时只显示一张图片 */
 }
 

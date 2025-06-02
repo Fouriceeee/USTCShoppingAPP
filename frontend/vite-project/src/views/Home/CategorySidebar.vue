@@ -1,5 +1,5 @@
 <template>
-  <div class="category-sidebar">
+  <div class="category-sidebar-wrapper">
     <div class="category-header">
       <h3>商品分类</h3>
     </div>
@@ -33,9 +33,9 @@ const categories = ref([
 </script>
 
 <style scoped>
-.category-sidebar {
-  width: 250px; /* 分类栏的固定宽度 */
-  background-color: rgb(255, 255, 255);
+.category-sidebar-wrapper {
+  width: 220px; /* 分类栏的固定宽度 */
+  background-color: rgb(245, 246, 250);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
   overflow: hidden;
